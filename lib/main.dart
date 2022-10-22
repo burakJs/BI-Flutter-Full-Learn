@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_full_learn/101/color_learn_view.dart';
-import 'package:flutter_full_learn/demos/stack_demo_view.dart';
+import 'package:flutter_full_learn/101/text_field_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,9 +31,19 @@ class MyApp extends StatelessWidget {
           elevation: 0,
           systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
+        textTheme: const TextTheme(
+          subtitle1: TextStyle(color: Colors.red),
+        ),
+        inputDecorationTheme: const InputDecorationTheme(
+          filled: true,
+          fillColor: Colors.white,
+          iconColor: Colors.red,
+          border: OutlineInputBorder(),
+          labelStyle: TextStyle(color: Colors.red, fontSize: 24, fontWeight: FontWeight.w600),
+        ),
         errorColor: ColorsItems.sulu,
       ),
-      home: const StackDemoView(),
+      home: const TextFieldLearnView(),
     );
   }
 }
